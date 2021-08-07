@@ -22,7 +22,7 @@ We tested two models :
 -demo_screenshots folder: contains screenshots from demo 
 
 
-# -Environment : 
+# Environment : 
 We used google colab for data exploration,AS for model building python 3.7.5, the backend was written by Flask (Python) and the frontend using Bootstrap.
 
 # To test the program just run this:
