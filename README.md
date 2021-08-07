@@ -23,7 +23,7 @@ Collaborative Filtering: Singular Value Decomposition (SVD) based Recommender Sy
 
 
 # Environment : 
-We used google colab for data exploration,AS for model building python 3.7.5, the backend was written by Flask (Python) and the frontend using Bootstrap.
+We used google colab for data exploration,as for model building python 3.7.5, the backend was written by Flask (Python) and the frontend using Bootstrap.
 
 # To test the program just run this:
 python main.py
