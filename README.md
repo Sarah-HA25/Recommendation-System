@@ -7,7 +7,7 @@ https://www.kaggle.com/ruichenyang/ecommerce-clothing-store
 
 # Models:
 We tested two models :
-* Baseline: Popularity based product recommendation(Recommend top Purchased Items)
+* Baseline: Popularity based recommendation(recommend top purchased items)
 * Collaborative Filtering: Singular Value Decomposition (SVD) based Recommender System
 
 
