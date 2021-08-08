@@ -28,5 +28,7 @@ We used google colab for data exploration,as for model building python 3.7.5, th
 # To test the program just run this:
 python main.py
 
-# Demo 
+# Demo Sample 
 ![img](https://github.com/Sarah-HA25/Recommendation-System-/blob/main/demo_screenshots/demo1.PNG)
+![img](https://github.com/Sarah-HA25/Recommendation-System-/blob/main/demo_screenshots/result1.PNG)
+
