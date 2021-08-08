@@ -1,5 +1,5 @@
 # Recommendation-System-
-An online clothing store aims to increase the average bill per customer, proposed the solution as a recommender system which suggests a set of other products for customers, we tested two models and prepared a demo using Flask. 
+An online clothing store aims to increase the average bill per customer,we proposed the solution as a recommender system which suggests a set of related products for customers, we tested two models and prepared a demo using Flask. 
 
 # Data:
 We used the data of an online clothing store 
@@ -7,8 +7,8 @@ https://www.kaggle.com/ruichenyang/ecommerce-clothing-store
 
 # Models:
 We tested two models :
-Baseline: Popularity based product recommendation(Recommend top Purchased Items)
-Collaborative Filtering: Singular Value Decomposition (SVD) based Recommender System
+* Baseline: Popularity based product recommendation(Recommend top Purchased Items)
+* Collaborative Filtering: Singular Value Decomposition (SVD) based Recommender System
 
 
 # Code Structure:
