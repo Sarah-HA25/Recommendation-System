@@ -30,5 +30,8 @@ python main.py
 
 # Demo Sample 
 ![img](https://github.com/Sarah-HA25/Recommendation-System-/blob/main/demo_screenshots/demo1.PNG)
+After hitting submit, it shows the recommendations according to the selected model 
 ![img](https://github.com/Sarah-HA25/Recommendation-System-/blob/main/demo_screenshots/result1.PNG)
+There is also an error page, in case of undefined product 
+![img](https://github.com/Sarah-HA25/Recommendation-System-/blob/main/demo_screenshots/result3.PNG)
 
