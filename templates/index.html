@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Recommendation System</title>
+</head>
+<body>
+
+
+    <div id="header">
+        <h1>Recommendation System Demo</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm center-block text-center">
+                <br><h3 class="mt-5">What Recommendation do you want?</h3>
+                <form class="mt-5" action = "/result" method="post">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary product">
+                            <input type="radio" name="options" id="BaseLine" value="BaseLine" autocomplete="off" checked required> BaseLine
+                        </label>
+                        <label class="btn btn-secondary product">
+                            <input type="radio" name="options" id="Collaborative" value="Collaborative" autocomplete="off"> Collaborative
+                        </label>
+
+                    </div>
+                    <div class="form-group mt-5">
+                        <input type="text" class="form-control" id="inputTitle" name="model_type" placeholder="Recommending method" required>
+                    </div>
+                    <div class="form-group mt-5">
+                        <div id='optionsBaseLine' class='selectorBM'>
+                 								
+                        </div>
+						
+                        <div id='optionsCollaborative' class='selectorBM'  style="display:none;">
+						<div class="form-group mt-5">
+                        <input type="text" class="form-control" id="inputProductId" name="product_type_id" placeholder="Enter Product ID" >
+                    </div>
+					</div>
+                            <h4>What Product do you want to pick?</h4>
+					    <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Dress
+                            </label>
+                            <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="products" value="product" autocomplete="off" required>Trousers 
+                            </label>
+							                            <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Jacket  
+                            </label>
+							                            <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Skirt 
+                            </label>
+			                <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Shirts   
+                            </label>
+							
+						    <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Sweater   
+                            </label>
+							  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Blazer  
+                            </label>
+			               
+						   <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>mini   
+                            </label>
+							
+							<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Blouse   
+                            </label>
+				            
+							<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Shorts
+                            </label>
+							
+						  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Jumpsuit 
+                            </label>
+														
+						  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>crop top 
+                            </label>						  													
+						  
+						  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Hooide 
+                            </label>
+							 						  
+						  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>TANK   
+                            </label>
+							
+						   <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Bodysuit  
+                            </label>
+							
+							<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>hoodie
+                            </label>
+							
+							<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Cardigan
+                            </label>
+							
+						   <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>romper
+                            </label>
+							
+													   <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Bomber
+                            </label>
+						   
+						   <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Pants
+                            </label>
+							
+						  <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>midi 
+                            </label>
+							
+					     <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Pullover
+                            </label>
+							
+											     <label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Gift Card 
+                            </label>
+						    
+							<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Tunic 
+                            </label>
+						<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>maxi 
+                            </label>
+							
+						<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Tousers
+                            </label>
+   												<label class="btn btn-secondary product">
+                                <input type="radio" name="bmselect" id="product" value="product" autocomplete="off" required>Accessory
+                            </label>
+              
+                        
+                    </div>
+                    <input type="submit" class="mainsubmit" placeholder="Submit">
+                </form>
+
+            </div>
+            <div class="col-sm"></div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 text-center">
+  
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input[name$='options']").click(function() {
+                var test = $(this).val();
+
+                $("div.selectorBM").hide();
+                $("#options" + test).show();
+                $("input[name='bmselect']").prop('checked',false);
+            });
+        });
+    </script>
+</body>
+</html>
