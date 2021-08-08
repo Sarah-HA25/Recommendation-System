@@ -1,4 +1,4 @@
-# Recommendation-System-
+# Recommendation-System
 An online clothing store aims to increase the average bill per customer, we proposed the solution as a recommender system which suggests a set of related products for customers, we tested two models and prepared a demo using Flask. 
 
 # Data:
